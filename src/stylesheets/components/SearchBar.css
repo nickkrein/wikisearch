@@ -1,0 +1,13 @@
+.searchbar {
+	position: relative;
+	bottom: 50px;
+	max-width: 1028px;
+	min-width: 275px;
+	width: 60%;
+	height: 50px;
+	border: 1px solid black;
+	border-radius: 10px;
+	outline: none;
+	font-size: 20px;
+	padding-left: 10px;
+}

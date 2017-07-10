@@ -1,0 +1,18 @@
+html {
+	height: 100%;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  text-decoration: none;
+}
+
+body {
+	height: 100%;
+}
+
+#root {
+	height: 100%
+}

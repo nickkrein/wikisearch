@@ -1,32 +1,27 @@
 import React from 'react';
+import '../stylesheets/components/SearchBar.css'
 
 export default class SearchBar extends React.Component {
 
-  constructor(props) {
-    super(props);
-    
-    this.state = {
-    	gacprefix: ''
-    }
-  }
+	componentDidMount() {
+		this.textInput.focus();
+	}
 
   handleChange = (e) => {
-  	
-  	const userInput = e.target.value;
-  	
-  	this.setState({
-  	 	gacprefix: userInput
-  	 }); 
-
-  	this.props.getCategories(userInput);
+  	let userInput = e.target.value;
+  	if (!userInput) {
+  		this.props.clearCategories()
+  		return;
+  	}
+  	this.props.getCategories(e.target.value)
   }
 
   render() {
     return (
-      <input 
+      <input className="searchbar"
       	onChange={this.handleChange} 
-      	value={this.state.text}
       	placeholder='Search for a category!'
+      	ref={(input) => {this.textInput = input;}}
       />
     );
   }
